@@ -7,16 +7,16 @@
 [ext_resource path="res://Level.gd" type="Script" id=6]
 [ext_resource path="res://Assets/comic.ttf" type="DynamicFontData" id=7]
 
-[sub_resource type="DynamicFont" id=6]
-size = 60
-font_data = ExtResource( 7 )
-
 [sub_resource type="DynamicFont" id=4]
 size = 60
 font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 50
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 60
 font_data = ExtResource( 7 )
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -36,15 +36,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.215686, 0.215686, 0.290196, 1 )
 
-[node name="PlayerScore" type="Label" parent="CanvasLayer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -200.0
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 6 )
-text = "0"
-align = 1
-valign = 1
+[node name="Screenshot(229)" type="Sprite" parent="CanvasLayer/ColorRect"]
+position = Vector2( 639, 362 )
+scale = Vector2( 1.31667, 0.784566 )
+texture = ExtResource( 3 )
 
 [node name="OpponentScore" type="Label" parent="CanvasLayer"]
 anchor_right = 1.0
@@ -56,19 +51,23 @@ text = "0"
 align = 1
 valign = 1
 
-[node name="Screenshot(229)" type="Sprite" parent="CanvasLayer/OpponentScore"]
-position = Vector2( 639, 362 )
-scale = Vector2( 1.31667, 0.784566 )
-texture = ExtResource( 3 )
-
 [node name="CountdownLabel" type="Label" parent="CanvasLayer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -300.0
 custom_colors/font_color = Color( 0.000857193, 0.0410563, 0.109721, 1 )
 custom_fonts/font = SubResource( 5 )
 text = "Countdown"
+align = 1
+valign = 1
+
+[node name="PlayerScore" type="Label" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -200.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "0"
 align = 1
 valign = 1
 
