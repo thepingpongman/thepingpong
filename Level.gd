@@ -7,6 +7,14 @@ func _ready():
 	$Ball2.position = Vector2(640,360)
 	$Player.position = Vector2(30,360)
 	$NPC.position = Vector2(1250,360)
+	var player := AudioStreamPlayer.new()
+	add_child(player)
+
+	var stream := load("res://Assets/bit-alert-online-audio-converter.mp3")
+	stream.loop = true
+
+	player.stream = stream
+	player.play()
 	
 func _on_Left_body_entered(body):
 	score_achieved()
@@ -32,5 +40,9 @@ func score_achieved():
 	$CanvasLayer/CountdownLabel.visible = true
 	$Player.position.x = 35
 	$NPC.position.x = 1280 - 35
+	var player = AudioStreamPlayer.new()
+	add_child(player)
+	player.stream = load("res://Assets/bababooey-sound-effect.mp3")
+	player.play()
 
 

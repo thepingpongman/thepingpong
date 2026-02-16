@@ -14,6 +14,10 @@ func _physics_process(delta):
 	var collision_object = move_and_collide(velocity * speed * delta)
 	if collision_object:
 		velocity = velocity.bounce(collision_object.normal)
+		var player = AudioStreamPlayer.new()
+		add_child(player)
+		player.stream = load("res://Assets/1240-via-pavion.mp3")
+		player.play()
 	
 func speed_increase():
 	speed += 1
@@ -30,5 +34,6 @@ func change_speed():
 	velocity.x = [-xSpeed,xSpeed][randi() % 2]
 	velocity.y = [-ySpeed,ySpeed][randi() % 2]
 	print(str(xSpeed) + " " + str(ySpeed))
+	
 func _on_SpeedChange_timeout():
 	speed_increase()
