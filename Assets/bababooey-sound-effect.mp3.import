@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bababooey-sound-effect.mp3-3d3483b8da0e2a88d2e5f911200e79d2.mp3str"
+
+[deps]
+
+source_file="res://Assets/bababooey-sound-effect.mp3"
+dest_files=[ "res://.import/bababooey-sound-effect.mp3-3d3483b8da0e2a88d2e5f911200e79d2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

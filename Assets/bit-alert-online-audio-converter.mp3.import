@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bit-alert-online-audio-converter.mp3-17cfcb899cd59150532797e8cadccf33.mp3str"
+
+[deps]
+
+source_file="res://Assets/bit-alert-online-audio-converter.mp3"
+dest_files=[ "res://.import/bit-alert-online-audio-converter.mp3-17cfcb899cd59150532797e8cadccf33.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
