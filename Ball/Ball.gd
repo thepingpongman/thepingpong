@@ -16,7 +16,7 @@ func _physics_process(delta):
 		velocity = velocity.bounce(collision_object.normal)
 	
 func speed_increase():
-	speed = 1
+	speed += 1
 func stop_ball():
 	speed = 0
 	
@@ -25,8 +25,8 @@ func restart_ball():
 	change_speed()
 
 func change_speed():
-	xSpeed = rand_range(0.5, 1.5)
-	ySpeed = rand_range(0.5, 1.5)
+	xSpeed = rand_range(0.5, 1.5) 
+	ySpeed = rand_range(0.5, 1.5) 
 	velocity.x = [-xSpeed,xSpeed][randi() % 2]
 	velocity.y = [-ySpeed,ySpeed][randi() % 2]
 	print(str(xSpeed) + " " + str(ySpeed))
